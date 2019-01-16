@@ -562,6 +562,9 @@ open class FSPagerView: UIView,UICollectionViewDataSource,UICollectionViewDelega
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = UIColor.clear
+        collectionView.clipsToBounds = false
+        self.clipsToBounds = false
+        self.contentView.clipsToBounds = false
         self.contentView.addSubview(collectionView)
         self.collectionView = collectionView
         self.collectionViewLayout = collectionViewLayout
